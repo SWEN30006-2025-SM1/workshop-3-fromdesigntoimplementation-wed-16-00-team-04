@@ -5,6 +5,8 @@ public class Assignment {
     String dueDate;
     String name;
     int maxAttempts;
+    final int assessmentCap = 4;
+    String status = "";
 
     public Assignment (String assignmentDescription, String assignmentDueDate, String assignmentName, int assignmentMaxAttempts) {
         description = assignmentDescription;
@@ -13,12 +15,13 @@ public class Assignment {
         maxAttempts = assignmentMaxAttempts;
     }
 
-    public Submission[] invalidSubmission() {
-        ;
-    }
-
-    public Submission[] validSubmission() {
-        ;
+    public String checkSubmission() {
+        if ((description == "") && (dueDate == "") && (maxAttempts > assessmentCap)) {
+            status = "Fail";
+        } else {
+            status = "True";
+        }
+        return status;
     }
 
 }
