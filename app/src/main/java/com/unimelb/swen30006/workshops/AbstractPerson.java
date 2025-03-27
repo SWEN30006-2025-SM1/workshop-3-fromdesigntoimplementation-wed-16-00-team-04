@@ -1,17 +1,15 @@
 package com.unimelb.swen30006.workshops;
 
-import java.time.LocalDate;
-
 abstract class AbstractPerson {
 	private String address;
-	private LocalDate dob;
+	private String dob;
 	private String name;
 
 	public void setAddress(String address) {
 		this.address = address;
 	}
 
-	public void setDob(LocalDate dob) {
+	public void setDob(String dob) {
 		this.dob = dob;
 	}
 
@@ -23,7 +21,7 @@ abstract class AbstractPerson {
 		return address;
 	}
 
-	public LocalDate getDob() {
+	public String getDob() {
 		return dob;
 	}
 

@@ -1,12 +1,10 @@
 package com.unimelb.swen30006.workshops;
 
-import java.time.LocalDate;
-
 public class Student extends AbstractPerson {
     private String email;
     private String studentID;
 
-    public Student(LocalDate dob, String name, String studentID, String address, String email)
+    public Student(String dob, String name, String studentID, String address, String email)
     {
         setDob(dob);
         setName(name);
@@ -23,6 +21,11 @@ public class Student extends AbstractPerson {
     public float totalGrade()
     {
         return 0f;
+    }
+
+    public boolean submitAssignment(Assignment a, String[] fnames)
+    {
+        return a.Submit(studentID, fnames);
     }
 
     // Setters
@@ -45,7 +48,7 @@ public class Student extends AbstractPerson {
     }
 
     @Override
-    public LocalDate getDob()
+    public String getDob()
     {
         return super.getDob();
     }

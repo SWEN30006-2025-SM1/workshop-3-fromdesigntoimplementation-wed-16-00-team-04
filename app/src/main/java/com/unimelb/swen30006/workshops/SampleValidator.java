@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /** Simple Sample Validator that only considers the file types
  * Created by mat on 10/02/2016.
  */
-public class SampleValidator implements SubmissionValidator{
+public class SampleValidator implements SubmissionValidator {
 
     @Override
     public ValidationError[] validateSubmission(Submission submission) {

@@ -1,12 +1,10 @@
 package com.unimelb.swen30006.workshops;
 
-import java.time.LocalDate;
-
 public class Staff extends AbstractPerson {
     private String roles[];
     private String staffID;
 
-    public Staff(LocalDate dob, String name, String[] roles, String staffID, String address)
+    public Staff(String dob, String name, String[] roles, String staffID, String address)
     {
         setDob(dob);
         setName(name);
@@ -41,7 +39,7 @@ public class Staff extends AbstractPerson {
     }
 
     @Override
-    public LocalDate getDob() {
+    public String getDob() {
         return super.getDob();
     }
 
